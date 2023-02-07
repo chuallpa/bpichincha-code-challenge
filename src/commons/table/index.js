@@ -1,9 +1,9 @@
-import React from "react";
-import TableRow from "./table-row";
-import TableHeadItem from "./table-head-item";
-import { arrayOf, string, func, object, shape } from "prop-types";
+import React from 'react';
+import TableRow from './table-row';
+import TableHeadItem from './table-head-item';
+import { arrayOf, string, func, object, shape } from 'prop-types';
 
-import "./styles.scss";
+import './styles.scss';
 
 const Table = ({
   theadData,
@@ -16,13 +16,13 @@ const Table = ({
     <table className="table">
       <thead>
         <tr>
-          {theadData.map((h) => {
+          {theadData.map(h => {
             return <TableHeadItem key={h} item={h} />;
           })}
         </tr>
       </thead>
       <tbody>
-        {tbodyData.map((item) => {
+        {tbodyData.map(item => {
           return (
             <TableRow
               key={item.id}

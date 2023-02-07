@@ -1,8 +1,8 @@
-import React from "react";
-import { VscAdd, VscChromeClose, VscSave } from "react-icons/vsc";
-import { string, oneOf } from "prop-types";
+import React from 'react';
+import { VscAdd, VscChromeClose, VscSave } from 'react-icons/vsc';
+import { string, oneOf } from 'prop-types';
 
-import "./styles.scss";
+import './styles.scss';
 
 const ICONS = {
   add: <VscAdd />,
@@ -25,8 +25,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  color: "primary",
-  className: "",
+  color: 'primary',
+  className: '',
   icon: '',
 };
 

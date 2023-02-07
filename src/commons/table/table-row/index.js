@@ -1,8 +1,8 @@
-import React from "react";
-import { VscEdit, VscTrash } from "react-icons/vsc";
-import { object, func } from "prop-types";
+import React from 'react';
+import { VscEdit, VscTrash } from 'react-icons/vsc';
+import { object, func } from 'prop-types';
 
-import "./styles.scss";
+import './styles.scss';
 
 const TableRow = ({ data, actionDelete, actionEdit }) => {
   return (

@@ -1,11 +1,11 @@
-import React from "react";
-import { func, string, bool } from "prop-types";
-import SearchIcon from "../../assets/icons/icon-search.svg";
+import React from 'react';
+import { func, string, bool } from 'prop-types';
+import SearchIcon from '../../assets/icons/icon-search.svg';
 
-import "./styles.scss";
+import './styles.scss';
 
 const InputText = ({ name, value, onChange, label, icon, ...otherProps }) => {
-  const handleOnChange = (e) => {
+  const handleOnChange = e => {
     onChange && onChange(name, e.target.value);
   };
 
@@ -15,7 +15,7 @@ const InputText = ({ name, value, onChange, label, icon, ...otherProps }) => {
       <div className="input-wrapper">
         {icon && <img alt="i" src={SearchIcon} />}
         <input
-          className={"input-text"}
+          className={'input-text'}
           value={value}
           name={name}
           type="text"

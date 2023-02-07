@@ -1,9 +1,9 @@
-import { func, string, number } from "prop-types";
+import { func, string, number } from 'prop-types';
 
-import "./styles.scss";
+import './styles.scss';
 
 const InputSlider = ({ name, value, label, onChange }) => {
-  const handleOnChange = (e) => {
+  const handleOnChange = e => {
     onChange && onChange(name, e.target.value);
   };
 

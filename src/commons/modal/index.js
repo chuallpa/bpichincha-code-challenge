@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { bool, func, string, object } from "prop-types";
+import React, { useState, useEffect } from 'react';
+import { bool, func, string, object } from 'prop-types';
 
-import Button from "../button";
-import InputText from "../input-text";
-import InputSlider from "../input-slider";
-import CrossIcon from "../../assets/icons/icon-cross.svg";
+import Button from '../button';
+import InputText from '../input-text';
+import InputSlider from '../input-slider';
+import CrossIcon from '../../assets/icons/icon-cross.svg';
 
-import "./styles.scss";
+import './styles.scss';
 
-const initState = { id: "", name: "", url: "", attack: 0, defense: 0 };
+const initState = { id: '', name: '', url: '', attack: 0, defense: 0 };
 
 const Modal = ({
   show,
@@ -29,7 +29,7 @@ const Modal = ({
 
   if (!show) {
     return null;
-  };
+  }
 
   console.log('pokemon', pokemon);
 
@@ -41,10 +41,10 @@ const Modal = ({
 
   return (
     <div
-      className={`modal ${show ? "modal--show" : ""}`}
+      className={`modal ${show ? 'modal--show' : ''}`}
       onClick={handleOnClose}
     >
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-cross-icon">
           <img alt="X" onClick={handleOnClose} src={CrossIcon} />
         </div>
