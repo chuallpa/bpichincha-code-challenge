@@ -27,6 +27,12 @@ const Modal = ({
     }
   }, [editPokemon]);
 
+  if (!show) {
+    return null;
+  };
+
+  console.log('pokemon', pokemon);
+
   const handleOnClose = () => {
     setPokemon(initState);
     setPokemonToEdit(null);
@@ -110,11 +116,13 @@ const Modal = ({
 };
 
 Modal.propTypes = {
-  show: bool.isRequired,
   onClose: func.isRequired,
-  title: string.isRequired,
   actionAdd: func.isRequired,
-  pokemon: object,
+  actionUpdate: func.isRequired,
+  editPokemon: object,
+  setPokemonToEdit: func.isRequired,
+  show: bool.isRequired,
+  title: string.isRequired,
 };
 
 Modal.defaultProps = {

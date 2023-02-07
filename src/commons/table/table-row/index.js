@@ -1,5 +1,6 @@
 import React from "react";
 import { VscEdit, VscTrash } from "react-icons/vsc";
+import { object, func } from "prop-types";
 
 import "./styles.scss";
 
@@ -30,6 +31,12 @@ const TableRow = ({ data, actionDelete, actionEdit }) => {
       </td>
     </tr>
   );
+};
+
+TableRow.propTypes = {
+  actionDelete: func.isRequired,
+  actionEdit: func.isRequired,
+  data: object.isRequired,
 };
 
 export default TableRow;

@@ -1,3 +1,5 @@
+import { func, string, number } from "prop-types";
+
 import "./styles.scss";
 
 const InputSlider = ({ name, value, label, onChange }) => {
@@ -22,6 +24,17 @@ const InputSlider = ({ name, value, label, onChange }) => {
       <label>100</label>
     </div>
   );
+};
+
+InputSlider.propTypes = {
+  name: string.isRequired,
+  label: string,
+  onChange: func.isRequired,
+  value: number.isRequired,
+};
+
+InputSlider.defaultProps = {
+  label: '',
 };
 
 export default InputSlider;

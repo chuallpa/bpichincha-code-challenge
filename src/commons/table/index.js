@@ -1,6 +1,7 @@
 import React from "react";
 import TableRow from "./table-row";
 import TableHeadItem from "./table-head-item";
+import { arrayOf, string, func, object, shape } from "prop-types";
 
 import "./styles.scss";
 
@@ -34,6 +35,18 @@ const Table = ({
       </tbody>
     </table>
   );
+};
+
+Table.propTypes = {
+  actionDelete: func.isRequired,
+  actionEdit: func.isRequired,
+  customClass: string,
+  tbodyData: arrayOf(shape({})).isRequired,
+  theadData: arrayOf(string).isRequired,
+};
+
+Table.defaultProps = {
+  customClass: '',
 };
 
 export default Table;

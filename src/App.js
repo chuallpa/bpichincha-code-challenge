@@ -39,7 +39,6 @@ const App = () => {
   const [pokemonToEdit, setPokemonToEdit] = useState(null);
   const [search, setSearch] = useState("");
   const { isEnabled, toggle } = useToggle();
-  
 
   const actionAdd = (payload) => {
     dispatch({ type: "add", payload });
