@@ -53,8 +53,11 @@ const Modal = ({
               placeholder="Pokemon"
               value={pokemon.name}
               onChange={(name, item) => {
-                if (!editPokemon) setPokemon({ ...pokemon, id: item });
-                setPokemon({ ...pokemon, [name]: item });
+                if (!editPokemon) {
+                  setPokemon({ ...pokemon, id: item, [name]: item });
+                } else {
+                  setPokemon({ ...pokemon, [name]: item });
+                }
               }}
             />
             <InputText
