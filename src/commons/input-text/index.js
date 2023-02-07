@@ -35,7 +35,7 @@ InputText.propTypes = {
   value: string.isRequired,
 };
 
-InputText.propTypes = {
+InputText.defaultProps = {
   icon: false,
   label: null,
 };

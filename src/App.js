@@ -14,11 +14,11 @@ const reducer = (state, action) => {
     case "add":
       return { data: [...state.data, action.payload] };
     case "delete":
-      const newState = state.filter((val) => val.id !== action.payload);
+      const newState = state.data.filter((val) => val.id !== action.payload);
       return { data: newState };
     case "update":
       const { payload } = action;
-      const newStateUpdated = state.map((el, index) => {
+      const newStateUpdated = state.data.map((el, index) => {
         if (index === payload.indexToUpdate)
           return Object.assign({}, payload.pokemon);
         return el;
@@ -50,7 +50,7 @@ const App = () => {
 
   const actionUpdate = (pokemon) => {
     let indexToUpdate = null;
-    state.forEach((element, index) => {
+    state.data.forEach((element, index) => {
       if (element.id === pokemon.id) {
         indexToUpdate = index;
       }
@@ -64,7 +64,7 @@ const App = () => {
         <h4>Listado de Pokemon</h4>
         <div className="header">
           <InputText
-            icon="search"
+            icon
             placeholder="Buscar"
             name="search"
             value={search}
