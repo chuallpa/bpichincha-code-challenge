@@ -1,0 +1,72 @@
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 37px;
+}
+
+.label-style {
+  width: 72px;
+}
+
+/* .input-slider {
+  margin: 0 10px;
+
+  &::-moz-range-thumb {
+    background: #6b54fd;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #6b54fd;
+    cursor: pointer;
+  }
+}
+
+.input-slider::-moz-range-thumb {
+  background: #6b54fd;
+  cursor: pointer;
+}
+
+.input-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #6b54fd;
+  cursor: pointer;
+} */
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 6px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  margin: 0 10px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 14px; /* Set a specific slider handle width */
+  height: 14px; /* Slider handle height */
+  background: #6b54fd; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: pink; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

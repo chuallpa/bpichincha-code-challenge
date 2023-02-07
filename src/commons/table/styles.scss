@@ -1,0 +1,19 @@
+.table {
+  table-layout: initial;
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    text-align: center;
+  }
+
+  th {
+    border: solid 1px gray;
+    padding: 15px;
+  }
+
+  td {
+    border: solid 1px gray;
+    padding: 10px 12px;
+  }
+}

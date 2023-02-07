@@ -1,0 +1,15 @@
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  svg {
+    cursor: pointer;
+  }
+}
